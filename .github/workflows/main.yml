@@ -14,4 +14,6 @@ jobs:
       - name: Echo 3
         run: echo "Job2 Third steps"
       - name: Echo 4
-        run: echo "Job2 Fourth steps"
+        run: |
+          echo "Job2 Fourth steps"
+          hostname -f
