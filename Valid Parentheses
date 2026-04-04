@@ -1,0 +1,16 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        l=list(s.strip())
+        holder=[]
+        for i in l:
+            if len(holder)==0:
+                holder.append(i)
+                continue
+            if i == ')' and holder[-1] =='(' or i == ']' and holder[-1] == '[' or i == '}' and holder[-1] == '{':
+                holder.pop()
+            else:
+                holder.append(i)
+        if len(holder) == 0:
+            return True
+        else:
+            return False
